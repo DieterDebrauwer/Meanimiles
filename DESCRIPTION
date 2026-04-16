@@ -1,0 +1,37 @@
+Package: Meanimiles
+Title: Estimation of Meanimiles
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Dieter", "Debrauwer", , "dieter.debrauwer@kuleuven.be", role = c("aut", "cre","cph"),
+    comment=c(ORCID="0000-0002-0171-1045")),
+     person("Irène", "Gijbels",, email = "irene.gijbels@kuleuven.be", role = "ctb",
+           comment = c(ORCID = "0000-0002-4443-9803")),
+    person("Gerda", "Claeskens",, email = "gerda.claeskens@kuleuven.be", role = "ctb",
+    comment = c(ORCID = "0000-0002-3863-5197")),
+    person("Klaus", "Herrmann",, email = "klaus.herrmann@usherbrooke.ca", role = "ctb",
+    comment = c(ORCID = "0000-0002-8044-5717")))
+Description: Provides a comprehensive suite of estimation tools for meanimiles, 
+    a general class of (risk) functionals. This package includes nonparametric 
+    estimators for univariate meanimile evaluation, copula-based estimation 
+    for portfolio risk aggregation (full parametric, semiparametric, and nonparametric),
+    and novel estimators for meanimiles in regression settings. 
+    Following the articles D. Debrauwer, I. Gijbels, and K. Herrmann (2025)
+    <doi:10.1214/25-EJS2391>, D. Debrauwer and I. Gijbels (2026)
+    <doi:10.1007/s00184-026-01022-9> and 
+    D. Debrauwer, I. Gijbels, and G. Claeskens (2026).
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+URL: https://github.com/DieterDebrauwer/Meanimiles
+BugReports: https://github.com/DieterDebrauwer/Meanimiles/issues
+Depends: 
+    R (>= 4.5.0)
+Imports: 
+    copula (>= 1.1.7),
+    fitdistrplus (>= 1.2.6),
+    stats (>= 4.5.3)
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)

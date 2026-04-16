@@ -1,0 +1,29 @@
+
+# Meanimiles
+
+This R package provides tools for the statistical estimation of
+meanimiles, a general and flexible class of (risk) functionals that
+unifies quantiles, expectiles, and extremiles.
+
+In particular, nonparametric estimators for univariate meanimile are
+implemented, as introduced and studied in:
+
+- Debrauwer, D., Gijbels, I., & Herrmann, K. (2025). On a general class
+  of functionals: Statistical inference and application to risk
+  measures. *Electronic Journal of Statistics*, 19(1), 2456-2510. doi:
+  [10.1214/25-EJS2391](https://doi.org/10.1214/25-EJS2391).
+
+Furthermore, the package includes several copula-based estimation
+procedures for portfolio risk aggregation. These accommodate parametric
+and nonparametric methods for both margins and dependence structures, as
+investigated in:
+
+- Debrauwer, D. & Gijbels, I. (2026). Copula-based estimation of
+  meanimiles of aggregated risks. *Metrika*. doi:
+  [10.1007/s00184-026-01022-9](https://doi.org/10.1007/s00184-026-01022-9).
+
+Finally, novel estimators for meanimiles in regression settings are
+implemented as well, following the methodology discussed in:
+
+- Debrauwer, D., Gijbels, I., & Claeskens, G. (2026). Conditional
+  meanimiles and regression. *Working paper*.

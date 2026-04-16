@@ -48,8 +48,7 @@ A numeric vector of length m, containing the estimated meanimile predictions at 
 \description{
 Estimates a conditional meanimile in nonparametric way.
 This function acts as a unified wrapper, allowing the user to seamlessly switch
-between the square loss formulation and the general loss formulation
-as described in Debrauwer et al. (2026).
+between the square loss formulation and the general loss formulation.
 }
 \examples{
 set.seed(123)

@@ -21,7 +21,8 @@ MeanimileLinearRegression(
 
 \item{Y}{A numeric vector of the response variable.}
 
-\item{d_tau}{A function representing the density function of the distributional weight function D_tau.}
+\item{d_tau}{A function representing the density function of the
+distributional weight function D_tau.}
 
 \item{tau}{A numeric risk level/index. Argument of d_tau function.}
 
@@ -49,16 +50,24 @@ as described in Debrauwer et al. (2026).
 set.seed(123)
 n <- 400
 X <- matrix(rnorm(n * 2), ncol = 2)
-Y <- 0.9 * X[,1] + 0.5 * X[,2] + rnorm(n)
-d_tau_minvar <- function(u, tau) { (tau + 1) * u^tau }
-lossDerivativeExpectiles <- function(x, c, delta) { -2 * ifelse(x > c, delta, 1 - delta) * (x - c) }
+Y <- 0.9 * X[, 1] + 0.5 * X[, 2] + rnorm(n)
+d_tau_minvar <- function(u, tau) {
+  (tau + 1) * u^tau
+}
+lossDerivativeExpectiles <- function(x, c, delta) {
+  -2 * ifelse(x > c, delta, 1 - delta) * (x - c)
+}
 
 # 1. Square Loss
-MeanimileLinearRegression(X, Y, d_tau = d_tau_minvar, tau = 2,
-                          h_x = c(0.4, 0.4), h_y = 0.4, loss_type = "square")
+MeanimileLinearRegression(X, Y,
+  d_tau = d_tau_minvar, tau = 2,
+  h_x = c(0.4, 0.4), h_y = 0.4, loss_type = "square"
+)
 
 # 2. General Loss
-MeanimileLinearRegression(X, Y, d_tau = d_tau_minvar, tau = 2,
-                          h_x = c(0.4, 0.4), h_y = 0.4, loss_type = "general",
-                         lossDerivative = lossDerivativeExpectiles, delta = 0.9)
+MeanimileLinearRegression(X, Y,
+  d_tau = d_tau_minvar, tau = 2,
+  h_x = c(0.4, 0.4), h_y = 0.4, loss_type = "general",
+  lossDerivative = lossDerivativeExpectiles, delta = 0.9
+)
 }

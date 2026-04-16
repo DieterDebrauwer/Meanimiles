@@ -15,7 +15,8 @@ ConditionalCDF(Y_eval, X_eval, Y_train, X_train, h_y, h_x)
 
 \item{X_train}{A numeric matrix of training X values.}
 
-\item{h_y}{A numeric scalar representing the bandwidth for the response variable Y.}
+\item{h_y}{A numeric scalar representing the bandwidth for the
+response variable Y.}
 
 \item{h_x}{A numeric vector representing the bandwidths for the covariates X.}
 }
@@ -24,5 +25,5 @@ A numeric vector of estimated CDF probabilities.
 }
 \description{
 Computes a doubly smoothed Nadaraya-Watson estimator for the conditional
-cumulative distribution function
+cumulative distribution function.
 }

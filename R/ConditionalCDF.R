@@ -1,21 +1,20 @@
-
 #' @title Estimate conditional cumulative distribution function
 #'
 #' @description
-#' Computes a doubly smoothed Nadaraya-Watson estimator for the conditional
-#' cumulative distribution function
+#'    Computes a doubly smoothed Nadaraya-Watson estimator for the conditional
+#'    cumulative distribution function.
 #'
 #' @param Y_eval A numeric vector of Y values where the CDF should be evaluated.
 #' @param X_eval A numeric matrix of X values where the CDF should be evaluated.
 #' @param Y_train A numeric vector of training Y values.
 #' @param X_train A numeric matrix of training X values.
-#' @param h_y A numeric scalar representing the bandwidth for the response variable Y.
+#' @param h_y A numeric scalar representing the bandwidth for the
+#'    response variable Y.
 #' @param h_x A numeric vector representing the bandwidths for the covariates X.
 #'
 #' @return A numeric vector of estimated CDF probabilities.
 #' @export
 ConditionalCDF <- function(Y_eval, X_eval, Y_train, X_train, h_y, h_x) {
-
   X_eval <- as.matrix(X_eval)
   X_train <- as.matrix(X_train)
 
@@ -32,7 +31,7 @@ ConditionalCDF <- function(Y_eval, X_eval, Y_train, X_train, h_y, h_x) {
   for (k in seq_len(d)) {
     # outer() creates an n_eval x n_train matrix of all pairwise differences
     K_k <- stats::dnorm(outer(X_eval[, k], X_train[, k], "-") / h_x[k])
-    W <- W * K_k  # Element-wise multiplication
+    W <- W * K_k # Element-wise multiplication
   }
 
   # Vectorized computation for the Y response

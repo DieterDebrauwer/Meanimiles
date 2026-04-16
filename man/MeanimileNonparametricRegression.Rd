@@ -25,7 +25,8 @@ MeanimileNonparametricRegression(
 
 \item{X0}{A numeric matrix of evaluation points (m x d) where the curve should be estimated.}
 
-\item{d_tau}{A function representing the density function of the distributional weight function D_tau.}
+\item{d_tau}{A function representing the density function of the
+distributional weight function D_tau.}
 
 \item{tau}{A numeric risk level/index. Argument of d_tau function.}
 
@@ -56,14 +57,18 @@ n <- 300
 
 # 1. Simulate 1D Non-linear Data (Sine Wave)
 X <- matrix(runif(n, -2, 2), ncol = 1)
-Y <- sin(X[,1] * 1.5) + rnorm(n, sd = 0.4)
+Y <- sin(X[, 1] * 1.5) + rnorm(n, sd = 0.4)
 
 # 2. Define Evaluation Grid
 X0 <- matrix(seq(-2, 2, length.out = 50), ncol = 1)
 
 # 3. Define Functions
-d_tau_minvar <- function(u, tau) { (tau + 1) * u^tau }
-loss_deriv_expectile <- function(x, c, delta) { -2 * ifelse(x > c, delta, 1 - delta) * (x - c) }
+d_tau_minvar <- function(u, tau) {
+  (tau + 1) * u^tau
+}
+loss_deriv_expectile <- function(x, c, delta) {
+  -2 * ifelse(x > c, delta, 1 - delta) * (x - c)
+}
 
 # 4. Fit Square Loss Nonparametric
 preds_sq <- MeanimileNonparametricRegression(

@@ -24,5 +24,3 @@ investigated in:
 
 Finally, novel estimators for meanimiles in regression settings are
 implemented as well.
-
-we add a test

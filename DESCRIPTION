@@ -28,4 +28,6 @@ Imports:
     copula (>= 1.1.7),
     fitdistrplus (>= 1.2.6),
     stats 
-
+Suggests: 
+    knitr,
+    rmarkdown

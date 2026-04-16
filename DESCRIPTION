@@ -6,8 +6,6 @@ Authors@R: c(
     comment=c(ORCID="0000-0002-0171-1045")),
      person("Irène", "Gijbels",, email = "irene.gijbels@kuleuven.be", role = "ctb",
            comment = c(ORCID = "0000-0002-4443-9803")),
-    person("Gerda", "Claeskens",, email = "gerda.claeskens@kuleuven.be", role = "ctb",
-    comment = c(ORCID = "0000-0002-3863-5197")),
     person("Klaus", "Herrmann",, email = "klaus.herrmann@usherbrooke.ca", role = "ctb",
     comment = c(ORCID = "0000-0002-8044-5717")))
 Description: Provides a comprehensive suite of estimation tools for meanimiles, 
@@ -17,8 +15,7 @@ Description: Provides a comprehensive suite of estimation tools for meanimiles,
     and novel estimators for meanimiles in regression settings. 
     Following the articles D. Debrauwer, I. Gijbels, and K. Herrmann (2025)
     <doi:10.1214/25-EJS2391>, D. Debrauwer and I. Gijbels (2026)
-    <doi:10.1007/s00184-026-01022-9> and 
-    D. Debrauwer, I. Gijbels, and G. Claeskens (2026).
+    <doi:10.1007/s00184-026-01022-9>.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -31,7 +28,4 @@ Imports:
     copula (>= 1.1.7),
     fitdistrplus (>= 1.2.6),
     stats 
-Suggests: 
-    knitr,
-    rmarkdown,
-    testthat (>= 3.0.0)
+

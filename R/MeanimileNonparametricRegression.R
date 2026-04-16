@@ -3,8 +3,7 @@
 #' @description
 #'    Estimates a conditional meanimile in nonparametric way.
 #'    This function acts as a unified wrapper, allowing the user to seamlessly switch
-#'    between the square loss formulation and the general loss formulation
-#'    as described in Debrauwer et al. (2026).
+#'    between the square loss formulation and the general loss formulation.
 #'
 #' @param X A numeric matrix of covariates (n x d).
 #' @param Y A numeric vector of the response variable.

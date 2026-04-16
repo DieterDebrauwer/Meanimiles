@@ -23,7 +23,4 @@ investigated in:
   [10.1007/s00184-026-01022-9](https://doi.org/10.1007/s00184-026-01022-9).
 
 Finally, novel estimators for meanimiles in regression settings are
-implemented as well, following the methodology discussed in:
-
-- Debrauwer, D., Gijbels, I., & Claeskens, G. (2026). Conditional
-  meanimiles and regression. *Working paper*.
+implemented as well.

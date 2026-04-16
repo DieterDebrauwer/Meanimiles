@@ -23,8 +23,4 @@ Furthermore, the package includes several copula-based estimation procedures for
 
 * Debrauwer, D. & Gijbels, I. (2026). Copula-based estimation of meanimiles of aggregated risks. *Metrika*. doi: [10.1007/s00184-026-01022-9](https://doi.org/10.1007/s00184-026-01022-9).
 
-Finally, novel estimators for meanimiles in regression settings are implemented as well, following the methodology discussed in:
-
-* Debrauwer, D., Gijbels, I., & Claeskens, G. (2026). Conditional meanimiles and regression. *Working paper*.
-
-
+Finally, novel estimators for meanimiles in regression settings are implemented as well.
